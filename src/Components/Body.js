@@ -1,5 +1,5 @@
 import React from "react";
-
+import Search from "./Search"
 import Axios from "axios";
 
 class Body extends React.Component{
@@ -28,8 +28,12 @@ class Body extends React.Component{
             })
         })
     }
+    searchEmp = (name) => {
+        console.log(name)
+    }
     render(){
         return(<div>
+            <Search searchEmp={this.searchEmp} />
             <table className="table">
   <thead>
     <tr>
