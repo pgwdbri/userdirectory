@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer(){
     return (<footer className="bg-warning text-center">
-        <h1>Copyright: Brianna Shade</h1>
+        <h1>Copyright</h1>
         <p>Company</p>
     </footer>)
 }

@@ -37,11 +37,11 @@ class Body extends React.Component{
             <table className="table">
   <thead>
     <tr>
-      <th scope="col">firstname</th>
-      <th scope="col">lastname</th>
-      <th scope="col">email</th>
-      <th scope="col">cell</th>
-      <th scope="col">gender</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Cell</th>
+      <th scope="col">Gender</th>
     </tr>
   </thead>
   <tbody>
