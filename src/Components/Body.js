@@ -19,7 +19,7 @@ class Body extends React.Component{
                     lastname: empRecords[i].name.last,
                     email: empRecords[i].email,
                     cell: empRecords[i].cell, 
-                    gender: empRecords[i].gender
+                    gender: empRecords[i].gender,
                 })
             }
             this.setState({
@@ -28,9 +28,11 @@ class Body extends React.Component{
             })
         })
     }
+
     searchEmp = (name) => {
         console.log(name)
     }
+    
     render(){
         return(<div>
             <Search searchEmp={this.searchEmp} />
@@ -42,6 +44,7 @@ class Body extends React.Component{
       <th scope="col">Email</th>
       <th scope="col">Cell</th>
       <th scope="col">Gender</th>
+      <th scope="col">Age</th>
     </tr>
   </thead>
   <tbody>
@@ -52,6 +55,7 @@ class Body extends React.Component{
             <td>{record.email}</td>
             <td>{record.cell}</td>
             <td>{record.gender}</td>
+            <td>{record.age}</td>
           </tr>)
       })}
   </tbody>
