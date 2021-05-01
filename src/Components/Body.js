@@ -7,6 +7,7 @@ class Body extends React.Component{
         employeeDB: [],
         employeeList: []
     }
+
     componentDidMount =() =>{
         Axios.get("https://randomuser.me/api/?results=50&nat=us")
         .then(employees => {
@@ -20,6 +21,7 @@ class Body extends React.Component{
                     email: empRecords[i].email,
                     cell: empRecords[i].cell, 
                     gender: empRecords[i].gender,
+                    age: empRecords[i].dob.age
                 })
             }
             this.setState({
@@ -31,8 +33,22 @@ class Body extends React.Component{
 
     searchEmp = (name) => {
         console.log(name)
+        let employSearch = [] 
+        for (let i = 0; i<this.state.employeeList.length - 1; i++){
+            console.log(this.state.employeeList[i].firstname.toLowerCase(),this.state.employeeList[i].lastname.toLowerCase())
+            if (this.state.employeeList[i].firstname.toLowerCase().search(name.toLowerCase()) > -1|| this.state.employeeList[i].lastname.toLowerCase().search(name.toLowerCase())  > -1){
+                employSearch.push(this.state.employeeList[i])
+            }
+            
+        }
+        this.setState({
+            employeeList : employSearch
+        })
     }
+
     
+     
+
     render(){
         return(<div>
             <Search searchEmp={this.searchEmp} />
