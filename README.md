@@ -1,3 +1,9 @@
+#This project is a simple employee directory. The user is provided with a table consisting of information about employees of the company. Functionality includes searching employees by name and sorting by age from oldest to youngest and youngest to oldest.
+
+<img width="1354" alt="Screen Shot 2021-05-01 at 1 41 29 PM" src="https://user-images.githubusercontent.com/77507157/116790592-fc485000-aa82-11eb-900f-21ac11c8dbd8.png">
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
